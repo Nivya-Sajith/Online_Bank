@@ -11,6 +11,8 @@ document.getElementById('head1').innerHTML=`Welcome ${details.uname}`
 
 function userlogin()
         {
+            
+            
             if(pwd1.value=='' || accnumb.value=='' )
             {
                 alert("Please fill the form!!")
@@ -32,8 +34,12 @@ function userlogin()
                         alert("Invalid password")
                     }
                 }
+                else{
+                    alert("Invalid Account number")
+                }
             }
         }
+        
 
 
 function deposit()
@@ -91,6 +97,7 @@ function withdraw()
     {
         alert('Insufficient balance');
         document.getElementById('with').reset();
+        
     }
     else{
 userdetails.balance-=amt;
@@ -103,7 +110,9 @@ document.getElementById('with').reset();
 else
 {
     alert("Incorrect Password")
-    depomsg.innerHTML=` `
+    document.getElementById('with').reset();
+    document.getElementById('withmsg').innerHTML=""
+
 
 
 }
